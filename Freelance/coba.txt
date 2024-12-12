@@ -1,0 +1,23 @@
+<script>
+      function showModal() {
+        alert("berhasil!");
+      }
+
+
+      function showToast(message) {
+        const snackbar = document.getElementById('snackbar');
+        snackbar.textContent = message;
+        snackbar.classList.add("show");
+
+
+        setTimeout(() => {
+          snackbar.classList.remove("show");
+        }, 3000);
+      }
+
+  
+      function browseCategory(category) {
+        showToast(`Browsing Category: ${category}`);
+        alert("Browsing category: " + category);
+      }
+    </script>

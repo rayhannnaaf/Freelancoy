@@ -1,0 +1,393 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #555;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #050505;
+  background: #2bff6b;
+}
+
+.btn_login {
+  background: #2bff6b;
+  color: #2bff6b;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+/* Jumbotron */
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #2bff6b, #2bff6b);
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin-bottom: 50px;
+  color: rgb(24, 190, 38);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.jumbotron-text p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.jumbotron-text button {
+  background: rgb(67, 184, 21);
+  color: #2bff6b;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.jumbotron-text button:hover {
+  background: #11be19;
+}
+
+.jumbotron-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Card Categories */
+.cards-categories {
+  width: 100%;
+  max-width: 1200px; /* Opsional, untuk tata letak */
+  margin: 0 auto; /* Pusatkan */
+}
+
+.cards-categories h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dinamis */
+  gap: 1.5rem; /* Jarak antar-kartu */
+  padding: 1rem; /* Jarak keseluruhan dari tepi */
+}
+
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h5 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p.description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card p.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffb72b;
+  margin-bottom: 15px;
+}
+
+.card .btn_belanja {
+  background: #39b812;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.9s ease;
+}
+
+.card .btn_belanja:hover {
+  background: #22ca0c;
+}
+
+
+/* Scrollbar Customization (Optional) */
+.cards-categories::-webkit-scrollbar {
+  height: 10px;
+}
+
+.cards-categories::-webkit-scrollbar-thumb {
+  background: #0fb926;
+  border-radius: 5px;
+}
+
+.cards-categories::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+@media (max-width: 768px) {
+  .card-categories {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Lebar kartu lebih kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-categories {
+    grid-template-columns: 1fr; /* Satu kartu per baris */
+  }
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Modal */
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-dialog {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h1 {
+  font-size: 1.5rem;
+  color: #16cf44;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-secondary {
+  background: #0eb337;
+  color: rgb(33, 182, 65);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.btn-yellow {
+  background: ;
+  color: rgb(33, 112, 33);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-yellow:hover {
+  background: #0da827;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .jumbotron-text {
+    margin-bottom: 20px;
+  }
+
+  .card-categories {
+    grid-template-columns: 1fr;
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  z-index: 1000;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+#snackbar.show {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+   /* Modal Popup Styling */
+   .modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modal-dialog {
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .modal-header h1 {
+    font-size: 18px;
+  }
+
+  .btn-close {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: red;
+  }
+
+  .modal-body {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  /* Button */
+  .btn-open-popup {
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-open-popup:hover {
+    background-color: #0056b3;
+  }
